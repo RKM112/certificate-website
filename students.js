@@ -1,7 +1,6 @@
-
 const students = [
   {
-    mobile: "8959705031",
+    mobile: "9876543210",
     name: "Rahul Kumar",
     certificate_id: "CERT001"
   },
