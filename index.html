@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Certificate Download</title>
+</head>
+<body>
+  <h2>Enter Mobile Number to Download Certificate</h2>
+  <input type="text" id="mobileInput" placeholder="Enter mobile number">
+  <button onclick="generateCertificate()">Get Certificate</button>
+  
+  <div id="certificateArea" style="display:none; margin-top:20px;">
+    <div id="certificate" style="width: 800px; height: 600px; border: 2px solid black; padding: 40px;">
+      <h1>Certificate of Participation</h1>
+      <p>This certifies that <strong id="studentName">Rahul Kumar</strong></p>
+      <p>has successfully participated in</p>
+      <h2>🌟 Your Workshop Name 🌟</h2>
+      <p>Date: <strong>21st June 2025</strong></p>
+      <p>Certificate ID: <span id="certId">CERT001</span></p>
+    </div>
+    <button onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+  <script src="students.js"></script>
+  <script src="html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
