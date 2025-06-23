@@ -13,7 +13,7 @@ function downloadPDF() {
     },
     jsPDF: {
       unit: 'px',
-      format: [1122, 793], // exact A4 landscape in pixels
+      format: [3508, 2480], // exact A4 landscape in pixels
       orientation: 'landscape'
     }
   };
