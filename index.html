@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Download Your Certificate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      background: white;
+      max-width: 500px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .certificate {
+      width: 1122px;
+      height: 793px;
+      padding: 60px;
+      margin: 30px auto;
+      border: 10px solid #004080;
+      background: white;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .certificate h1 {
+      font-size: 32px;
+      color: #004080;
+      margin-bottom: 10px;
+    }
+    .certificate h2 {
+      font-size: 26px;
+      margin: 10px 0;
+      color: #c62828;
+    }
+    .certificate p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Get Your Certificate</h2>
+    <input type="text" id="mobileInput" placeholder="Enter your registered mobile number" />
+    <br />
+    <button onclick="generateCertificate()">Generate Certificate</button>
+  </div>
+
+  <div id="certificateArea" style="display:none;">
+    <div id="certificate" class="certificate">
+      <h1>CERTIFICATE OF COMPLETION</h1>
+      <p>This certifies that</p>
+      <h2 id="studentName">Participant Name</h2>
+      <p>has successfully participated in</p>
+      <h2 id="workshopName">Workshop Title</h2>
+      <p>held at <span id="location">Workshop Location</span></p>
+      <p>from <span id="date">Workshop Date</span></p>
+      <p>We wish them great success ahead!</p>
+    </div>
+    <button onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+  <script src="students.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
